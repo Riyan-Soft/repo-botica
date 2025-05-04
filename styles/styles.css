@@ -28,7 +28,7 @@ body{
 }
 
 .header .logo img{
-    height: 70px;
+    height: 60px;
     width: auto;
     transition: all 0.3s;
 }
@@ -60,12 +60,12 @@ body{
     color: #ffe1da;
 }
 
-/**/.menu {
+.menu {
     display:none;
 }
 
 .header .btn button,
-/**/.header .menu button{
+.header .menu button{
     margin-left: 20px;
     font-weight: 700;
     color: #1b3039;
@@ -78,14 +78,14 @@ body{
 }
 
 .header .btn button:hover,
-/**/.header .menu button:hover{
+.header .menu button:hover{
     background-color: #e2f1f8;
-    color: #ffbc0e;
+    color: #1b3039;
     transform: scale(1.1);
 }
 
 
-/**/@media screen and (max-width: 800px){
+@media screen and (max-width: 800px){
     .nav-links, .btn {
         display: none;
     }
@@ -100,7 +100,6 @@ body{
 
 .header a{
     text-decoration: none;  
-    /*borramos el que teniamos en .header .nav-links a*/ 
 }
 
 .header .overlay {
@@ -153,4 +152,14 @@ body{
         top: 15px;
         right: 35px;
     }
+}
+
+.contact-info{
+    background-color: rgb(247, 51, 51);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: Nunito, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
 }
