@@ -299,7 +299,7 @@ body{
     flex: 1 1 calc(33.333% - 40px); /* Cada elemento ocupa un tercio del ancho disponible menos el espacio del gap */
     max-width: 300px;
     text-align: center;
-    background-color: #dddddd;
+    background-color: #d8d8d8;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
