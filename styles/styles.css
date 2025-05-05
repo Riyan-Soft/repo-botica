@@ -184,7 +184,7 @@ body{
 /* medidas de la imagen */
 .hero-image img{
     height: 200px;
-    width: 600px; ;
+    width: 600px;
     display: flex;
     border-radius: 0%;
 }
