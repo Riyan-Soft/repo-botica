@@ -295,59 +295,103 @@ body{
     gap: 20px;
 }
 
-/* footer de kevin  */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #fff;
-  }
-  
-  footer {
+.service-cards .card {
+    flex: 1 1 calc(33.333% - 40px); /* Cada elemento ocupa un tercio del ancho disponible menos el espacio del gap */
+    max-width: 300px;
+    text-align: center;
+    background-color: #dddddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* efecto zoom */
+.service-cards .card:hover {
+    transform: scale(1.05);
+}
+
+.service-cards .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-cards .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #791718;
+}
+
+.service-cards .card p {
+    font-size: 1rem;
+    color: #555;
+}
+/* Para pantallas pequeñas */
+@media screen and (max-width: 800px) {
+    .service-cards .card {
+        flex: 1 1 calc(50% - 20px); /* Cada elemento ocupa la mitad del ancho disponible */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .service-cards .card {
+        flex: 1 1 100%; /* Cada elemento ocupa el ancho completo */
+    }
+}
+
+/* - - - - - - - -  */
+
+/* Footer */
+
+footer {
     background: #f9f9f9;
     border-top: 5px solid #222;
     padding: 20px 40px;
     color: #333;
-  }
-  
-  .footer-container {
+}
+
+.footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     color: #f00;
-  }
-  
-  .footer-column {
+} 
+
+.footer-column {
     flex: 1 1 200px;
     margin: 10px;
-  }
-  
-  .footer-column img {
+} 
+
+.footer-column img {
     max-width: 150px;
-  }
+} 
   
-  .social-icons img {
+.social-icons img {
     width: 32px;
     margin-right: 10px;
     vertical-align: middle;
-  }
-  
-  .telefono {
+}
+
+.telefono {
     color: red;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
     color: red;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
-  
+}
+
 .copyright {
     text-align: center;
     color: #aaa;
     font-size: 12px;
     margin-top: 20px;
-
 }
+/*  */
