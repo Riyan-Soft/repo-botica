@@ -109,7 +109,7 @@ body{
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: rgba(33, 49, 63, .95);
+    background-color: rgba(0, 8, 15, 0.932);
     overflow: hidden;
     transition: all 0.3s ease 0s;
 }
@@ -133,7 +133,7 @@ body{
 
 .header .overlay a:hover, 
 .header .overlay a:focus{
-    color: #ffbc0e;
+    color: #747474;
 }
 
 .header .overlay .close{
