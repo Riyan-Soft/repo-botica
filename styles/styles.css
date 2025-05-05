@@ -154,6 +154,11 @@ body{
     }
 }
 
+.spacer{
+    height: 85px;
+    display: flex;
+}
+
 .contact-info{
     background-color: rgb(247, 51, 51);
     color: rgb(255, 255, 255);
@@ -162,4 +167,38 @@ body{
     font-size: 20px;
     justify-content: center;
     display: flex;
+}
+
+.hero {
+    background-image: url('../resources/pastel-bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image{
+    height: 400px;
+}
+/* medidas de la imagen */
+.hero-image img{
+    height: 200px;
+    width: 600px; ;
+    display: flex;
+    border-radius: 0%;
+}
+.hero-text{
+    color: rgb(255, 255, 255);
+    font-family: Nunito, sans-serif;
+    background-image:linear-gradient(to right, #791718, #cc2d2d);
+    justify-content: center;
+    align-items: center;
+    background-color: #791718;
+    border-radius: 0%;
+    width: flex;
+    padding: 10%;
+}
+.hero-text a{
+    color:#e2f1f8;
 }
