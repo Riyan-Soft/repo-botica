@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
 
+.contact-info{
+    background-color: rgb(247, 51, 51);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: Nunito, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -30,11 +40,13 @@ body{
 .header .logo img{
     height: 60px;
     width: auto;
+    cursor: pointer;
     transition: all 0.3s;
 }
 
 .header .logo img:hover{
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 .header .nav-links{
@@ -47,7 +59,7 @@ body{
 }
 
 .header .nav-links li:hover,
-/**/.overlay a:hover{
+.overlay a:hover{
     transform: scale(1.1);
 }
 
@@ -93,8 +105,6 @@ body{
         display: inherit;
     }
 }
-
-
 
 /*Nav Mobile*/
 
@@ -154,21 +164,18 @@ body{
     }
 }
 
+/* - - - - - - - - -  */
+
+/* div vacio */
 .spacer{
     height: 85px;
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
 }
 
-.contact-info{
-    background-color: rgb(247, 51, 51);
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-family: Nunito, sans-serif;
-    font-size: 20px;
-    justify-content: center;
-    display: flex;
-}
+/* - - - - - - -  */
 
+/* Seccion del centro */
 .hero {
     background-image: url('../resources/pastel-bg.jpg');
     background-size: cover;
@@ -178,27 +185,123 @@ body{
     align-items: center;
 }
 
-.hero-image{
-    height: 400px;
-}
-/* medidas de la imagen */
-.hero-image img{
-    height: 200px;
-    width: 600px;
+.hero-image {
+    height: auto;
     display: flex;
-    border-radius: 0%;
-}
-.hero-text{
-    color: rgb(255, 255, 255);
-    font-family: Nunito, sans-serif;
-    background-image:linear-gradient(to right, #791718, #cc2d2d);
     justify-content: center;
     align-items: center;
-    background-color: #791718;
-    border-radius: 0%;
-    width: flex;
-    padding: 10%;
 }
+
+.hero-image img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;    
+}
+
+.hero-text {
+    color: rgb(255, 255, 255);
+    font-family: Nunito, sans-serif;
+    background-image: linear-gradient(to right, #791718, #cc2d2d);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    box-shadow: 4px 4px rgb(150, 192, 255);
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    margin: auto; /* Centrar el contenedor */
+}
+
 .hero-text a{
     color:#e2f1f8;
+}
+
+@media screen and (max-width: 800px) {
+    .hero-image img {
+        width: 90%;
+        height: auto;
+    }
+
+    .hero-text {
+        padding: 10%;
+    }
+}
+
+/* - - - - - - - - - - -  */
+
+/* Sección de servicios */
+/* Mejor no tocar:) */
+.card{
+    cursor: pointer;
+}
+
+.services {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #f9f9f9;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-cards .card {
+    flex: 1 1 calc(33.333% - 40px); /* Cada elemento ocupa un tercio del ancho disponible menos el espacio del gap */
+    max-width: 300px;
+    text-align: center;
+    background-color: #dddddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* efecto zoom */
+.service-cards .card:hover {
+    transform: scale(1.05);
+}
+.service-cards .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-cards .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #791718;
+}
+
+.service-cards .card p {
+    font-size: 1rem;
+    color: #555;
+}
+/* Para pantallas pequeñas */
+@media screen and (max-width: 800px) {
+    .service-cards .card {
+        flex: 1 1 calc(50% - 20px); /* Cada elemento ocupa la mitad del ancho disponible */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .service-cards .card {
+        flex: 1 1 100%; /* Cada elemento ocupa el ancho completo */
+    }
 }
