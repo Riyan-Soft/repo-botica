@@ -26,11 +26,11 @@ while($fila=$resultado->fetch_array(MYSQLI_ASSOC)){
     }
 }
 
-//Validamos
-if($encontrados){
-    // echo "¡Hola bienvenido!";
-    header('Location: ../views/dashboard.php'); //Redireccionamiento al panel administrativo
-}else{
-    header('Location: ../index.php'); //Redireccionamiento al login
-    // echo "Usuario Incorrecto";
+// Validar credenciales del usuario
+if ($encontrados) {
+    header("Location: ../views/dashboard.php"); // Redirige al dashboard
+    exit();
+} else {
+    echo "Usuario o contraseña incorrectos.";
 }
+?>
