@@ -168,7 +168,7 @@ body{
 
 /* div vacio */
 .spacer{
-    height: 85px;
+    height: 50px;
     background-color: rgba(255, 255, 255, 0);
     display: flex;
 }
@@ -177,7 +177,59 @@ body{
 /* Sección de héroe */
 /* Mejor no tocar:) */
 
-.hero {
+.cuadro-info-andypage {
+    display: flex;
+    height: 100vh;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: hidden;
+}
+
+.info-texto-andypage {
+    flex: 1;
+    padding: 50px;
+    color: #eceff1;
+    background-color: #a30d0d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-imagen-andypage {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-imagen-andypage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #a30d0d , transparent);
+    z-index: 1;
+}
+
+.info-imagen-andypage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.info-texto-andypage h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.info-texto-andypage p {
+    font-size: 1.2rem;
+}
+
+
+/*.hero {
     background-image: url('../resources/pastel-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -266,7 +318,7 @@ body{
     .hero-text p {
         font-size: 1rem;
     }
-}
+}*/
 
 /* - - - - - - - - - - -  */
 
@@ -299,7 +351,7 @@ body{
     flex: 1 1 calc(33.333% - 40px); /* Cada elemento ocupa un tercio del ancho disponible menos el espacio del gap */
     max-width: 300px;
     text-align: center;
-    background-color: #d8d8d8;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
