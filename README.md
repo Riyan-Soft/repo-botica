@@ -1,9 +1,5 @@
 # Web preview
-https://Riyan-Soft/Riyan-Soft.github.io
-<<<<<<< HEAD
-Senati 3er semester
-=======
+https://Riyan-Soft.github.io
 
-dfgddf
-senati 3er ciclo
-cambio 2
+Senati 3er semester
+
