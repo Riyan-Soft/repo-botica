@@ -64,6 +64,7 @@
             .login-container {
                 padding: 20px;
             }
+
             .login-container h1 {
                 font-size: 1.5rem;
             }
