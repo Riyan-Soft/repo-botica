@@ -1,5 +1,5 @@
 # Web preview
-https://Riyan-Soft.github.io
+https://Riyan-Soft/Riyan-Soft.github.io
 <<<<<<< HEAD
 Senati 3er semester
 =======
