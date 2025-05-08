@@ -24,18 +24,24 @@
             padding: 30px 25px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            width: 320px;
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-container img {
+            width: 120px;
+            margin-bottom: 15px;
         }
 
         h2 {
-            text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: #333;
         }
 
         label {
             font-weight: bold;
             display: block;
+            text-align: left;
             margin-bottom: 6px;
         }
 
@@ -71,7 +77,6 @@
 
         .form-footer {
             margin-top: 15px;
-            text-align: center;
             font-size: 0.9em;
             color: #666;
         }
@@ -80,6 +85,7 @@
 <body>
 
     <div class="login-container">
+        <img src="../../web/resources/logo-botica.png" alt="Logo de la Botica">
         <h2>Iniciar Sesión</h2>
         <form action="controllers/ControllerUser.php" method="POST">
             <label for="user">Usuario</label>
@@ -91,7 +97,7 @@
             <input type="submit" value="Iniciar Sesión">
         </form>
         <div class="form-footer">
-            © 2025 Botica Servi Salud
+            © 2025 Botica System
         </div>
     </div>
 
