@@ -1,88 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
         body {
-            font-family: 'Nunito', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #791718, #cc2d2d);
-            color: #fff;
+            background: #f0f2f5;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-        }
-        .login-container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
+            margin: 0;
         }
 
-        .login-container h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .login-container {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 320px;
         }
-        .login-container label {
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
             display: block;
-            font-size: 1rem;
-            margin-bottom: 5px;
-            text-align: left;
+            margin-bottom: 6px;
         }
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
+
+        input[type="text"], input[type="password"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
             border: none;
             border-radius: 5px;
-            font-size: 1rem;
-        }
-        .login-container input[type="submit"] {
-            background: linear-gradient(to right, #cc2d2d, #791718);
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-size: 1rem;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
-        .login-container input[type="submit"]:hover {
-            background: linear-gradient(to right, #791718, #cc2d2d);
-            transform: scale(1.05);
-        }
-        @media screen and (max-width: 500px) {
-            .login-container {
-                padding: 20px;
-            }
 
-            .login-container h1 {
-                font-size: 1.5rem;
-            }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        .form-footer {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
         }
     </style>
 </head>
-
 <body>
+
     <div class="login-container">
-        <h1>Iniciar Sesión</h1>
+        <h2>Iniciar Sesión</h2>
         <form action="controllers/ControllerUser.php" method="POST">
             <label for="user">Usuario</label>
             <input type="text" id="user" name="user" placeholder="Escribe tu usuario" required>
+
             <label for="pass">Contraseña</label>
             <input type="password" id="pass" name="pass" placeholder="Escribe tu contraseña" required>
+
             <input type="submit" value="Iniciar Sesión">
         </form>
+        <div class="form-footer">
+            © 2025 Botica Servi Salud
+        </div>
     </div>
-</body>
 
+</body>
 </html>
