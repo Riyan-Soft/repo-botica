@@ -59,4 +59,3 @@ class Conexion{
         $this->database = $database;
     }
 }
-

@@ -1,16 +1,14 @@
-<?php
-// Iniciar la sesión
-session_start();
-if (isset($_SESSION["usuario_sesion"])) {
-  $nombre_usuario = $_SESSION["usuario_sesion"]["nombre"];
-  $apellido_usuario = $_SESSION["usuario_sesion"]["apellido"];
-} else {
-  echo "No hay sesión activa";
-  (header('Location: ../index.php'));
-  exit();
-}
+<?php 
+  session_start();
+  if(isset($_SESSION["usuario_sesion"])){
+    $nombre_usuario = $_SESSION["usuario_sesion"]["nombre"];
+    $apellido_usuario = $_SESSION["usuario_sesion"]["apellido"];
+  }else{
+    header("location: ../index.php");
+    // echo "No existe la sessión";
+    // exit();
+  }
 ?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -150,8 +148,9 @@ if (isset($_SESSION["usuario_sesion"])) {
                     alt="User Image"
                   />
                   <span class="hidden-xs">
-                    <?php echo $nombre_usuario . " " . $apellido_usuario; 
-                    ?>
+                    <?php //inicio
+                      echo $nombre_usuario." ".$apellido_usuario
+                    //cierre ?>
                   </span>
                 </a>
                 <ul class="dropdown-menu">
@@ -164,8 +163,9 @@ if (isset($_SESSION["usuario_sesion"])) {
                     />
 
                     <p>
-                    <?php echo $nombre_usuario . " " . $apellido_usuario; 
-                    ?>
+                      <?php //inicio
+                      echo $nombre_usuario." ".$apellido_usuario
+                    //cierre ?> - Web Developer
                       <small>Member since Nov. 2012</small>
                     </p>
                   </li>
@@ -190,7 +190,10 @@ if (isset($_SESSION["usuario_sesion"])) {
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="../controllers/CerrarSesion.php" 
+                         class="btn btn-default btn-flat">
+                          Cerrar Sesion
+                      </a>
                     </div>
                   </li>
                 </ul>
@@ -213,8 +216,9 @@ if (isset($_SESSION["usuario_sesion"])) {
               />
             </div>
             <div class="pull-left info">
-              <p> <?php echo $nombre_usuario . " " . $apellido_usuario; 
-                    ?></p>
+              <p><?php //inicio
+                      echo $nombre_usuario." ".$apellido_usuario
+                    //cierre ?></p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
