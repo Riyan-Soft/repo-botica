@@ -1,5 +1,5 @@
 <?php
-//Escribimos el codigo
+
 session_start();
 if (isset($_SESSION["usuario_sesion"])) {
     header("Location: views/dashboard.php");
@@ -8,30 +8,30 @@ if (isset($_SESSION["usuario_sesion"])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <!-- Mis propios estilos -->
-    <link rel="stylesheet" href="views/assets/css/login.css">
-    <!-- Poner icono -->
-    <link rel="shortcut icon" href="#" type="image/x-icon"> 
+    <link rel="stylesheet" href="views/assets/css/login-intranet.css">
 </head>
-
 <body>
-    <form action="controllers/UserController.php" method="POST" style="border:1px solid;">
-        <fieldset>
-            <legend>FORMULARIO-EMPRESA</legend>
+    <div class="login-container">
+        <img src="views/assets/img/logo-botica.png" alt="Logo de Botica Servi Salud" class="logo">
+        <h2>Iniciar Sesión</h2>
+        <form action="controllers/UserController.php" method="POST">
             <label for="user">Usuario</label>
-            <input type="text" name="user" placeholder="Escribe tu usuario">
+            <input type="text" id="user" name="user" placeholder="Escribe tu usuario" required>
+
             <label for="pass">Contraseña</label>
-            <input type="password" name="pass" placeholder="Escribe tu contraseña">
+            <input type="password" id="pass" name="pass" placeholder="Escribe tu contraseña" required>
+
             <input type="submit" value="Iniciar Sesión">
-        </fieldset>
-    </form>
+        </form>
+        <div class="form-footer">
+            © 2025 Botica Servi Salud
+        </div>
+    </div>
 
 </body>
-
 </html>

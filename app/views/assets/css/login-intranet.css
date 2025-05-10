@@ -5,7 +5,7 @@
 }
 
 body{
-    background: linear-gradient(to right,rgb(71, 20, 20),rgb(250, 13, 13));
+    background: linear-gradient(to right,rgb(51, 1, 1),rgb(170, 1, 1));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,8 +24,8 @@ body{
 }
 
 .login-container img {
-    width: 120px;
-    margin-bottom: 15px;
+    width: 180px;
+    margin-bottom: 1px;
 }
 
 h2 {
@@ -75,3 +75,4 @@ input[type="submit"]:hover {
     font-size: 0.9em;
     color: #666;
 }
+
