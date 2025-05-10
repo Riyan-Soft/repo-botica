@@ -1,6 +1,0 @@
-<?php
-session_start(); //Tenemos que inicializar
-session_destroy(); // y luego destruir la sesion
-
-header("Location: ../index.php");
-?>
