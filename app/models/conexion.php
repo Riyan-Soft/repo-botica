@@ -17,7 +17,12 @@ class Conexion{
     public function __destruct(){ }
     // Funcion para conectar
     public function conectar(){
-        $this->conexion = new mysqli($this->servidor,$this->user,$this->clave,$this->database);
+        $this->conexion = new mysqli($this->servidor, $this->user, $this->clave, $this->database);
+
+        // Verifica si la conexión fue exitosa
+        if ($this->conexion->connect_error) {
+            die("Error de conexión: " . $this->conexion->connect_error);
+        }
     }
     //Funcion para salir o cerrar conexion
     public function cerrarConexion(){
