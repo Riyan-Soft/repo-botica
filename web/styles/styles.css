@@ -229,6 +229,7 @@ body{
 }
 
 
+
 /*.hero {
     background-image: url('../resources/pastel-bg.jpg');
     background-size: cover;
@@ -392,6 +393,16 @@ body{
     .service-cards .card {
         flex: 1 1 100%; /* Cada elemento ocupa el ancho completo */
     }
+}
+
+/* CONTACTA CON NOSOTROS */
+
+.contact-us {
+    transition: transform 0.3s ease;
+}
+
+.contact-us:hover {
+    transform: scale(1.05);
 }
 
 /* - - - - - - - -  */
