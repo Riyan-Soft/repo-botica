@@ -1,94 +1,25 @@
+<?php
+
+session_start();
+if (isset($_SESSION["usuario_sesion"])) {
+    header("Location: views/dashboard.php");
+} else {
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(to right,rgb(71, 20, 20),rgb(250, 13, 13));
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .login-container {
-            border: 2px solid rgb(113, 154, 161);
-            background: white;
-            padding: 30px 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            width: 350px;
-            text-align: center;
-        }
-
-        .login-container img {
-            width: 120px;
-            margin-bottom: 15px;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        label {
-            font-weight: bold;
-            display: block;
-            text-align: left;
-            margin-bottom: 6px;
-        }
-
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            transition: 0.3s;
-        }
-
-        input[type="text"]:focus, input[type="password"]:focus {
-            border-color: #007bff;
-            outline: none;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        input[type="submit"]:hover {
-            background: #0056b3;
-        }
-
-        .form-footer {
-            margin-top: 15px;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="views/assets/css/login-intranet.css">
 </head>
 <body>
-
     <div class="login-container">
-    <img src="../../web/resources/logo-botica.png" alt="Botica Servi Salud">
+        <img src="views/assets/img/logo-botica.png" alt="Logo de Botica Servi Salud" class="logo">
         <h2>Iniciar Sesión</h2>
-        <form action="../controllers/ControllerUser.php" method="POST">
+        <form action="controllers/UserController.php" method="POST">
             <label for="user">Usuario</label>
             <input type="text" id="user" name="user" placeholder="Escribe tu usuario" required>
 
