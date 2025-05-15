@@ -65,11 +65,11 @@ body{
 
 .header .nav-links a{
     font-size: 700;
-    color: #eceff1; 
+    color: #ffffff; 
 }
 
 .header .nav-links a:hover{
-    color: #ffe1da;
+    color: #ffffff;
 }
 
 .menu {
@@ -197,7 +197,7 @@ body{
 
 .info-imagen-andypage {
     flex: 1;
-    position: relative;
+    position: sticky;
     overflow: hidden;
 }
 
@@ -216,17 +216,26 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .info-texto-andypage h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .info-texto-andypage p {
     font-size: 1.2rem;
 }
+
+.cuadro-info-andypage .info-texto-andypage .botones .btn-leer .btn1 {
+    transition: transform 0.3s ease;
+}
+
+.cuadro-info-andypage .info-texto-andypage .botones .btn-leer .btn1:hover {
+    transform: scale(1.05);
+}
+
 
 
 
@@ -289,21 +298,22 @@ body{
 
 /* Para pantallas pequeñas */
 @media screen and (max-width: 800px) {
-    .hero {
-        padding: 20px;
+    .cuadro-info-andypage {
+        padding: 0px;
     }
 
-    .hero-text h1 {
+    .info-texto-andypage h1 {
         font-size: 2.5rem; 
     }
 
-    .hero-text p {
+    .info-texto-andypage p {
         font-size: 1.2rem;
     }
 
-    .hero-text a {
-        font-size: 1rem; /* Ajusta el tamaño del botón */
+    .info-texto-andypage .botones .btn-leer .btn1{
+        font-size: 0.9rem; /* Ajusta el tamaño del botón */
         padding: 10px 20px;
+        margin: 0;
     }
 }
 
@@ -352,7 +362,7 @@ body{
     flex: 1 1 calc(33.333% - 40px); /* Cada elemento ocupa un tercio del ancho disponible menos el espacio del gap */
     max-width: 300px;
     text-align: center;
-    background-color: #d8d8d8;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -431,7 +441,7 @@ footer {
 .footer-column img {
     max-width: 150px;
 } 
-  
+
 .social-icons img {
     width: 32px;
     margin-right: 10px;
