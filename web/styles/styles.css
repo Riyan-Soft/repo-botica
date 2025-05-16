@@ -189,7 +189,7 @@ body{
     flex: 1;
     padding: 50px;
     color: #eceff1;
-    background-color: #a30d0d;
+    background-color: #e53935;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -208,7 +208,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #a30d0d , transparent);
+    background: linear-gradient(to right, #e53935 , transparent);
     z-index: 1;
 }
 
@@ -392,16 +392,28 @@ body{
     font-size: 1rem;
     color: #555;
 }
-/* Para pantallas pequeñas */
+
+@media (max-width: 768px) {
+    .services {
+    overflow-x: auto;                  /* Permite desplazamiento horizontal */
+    scroll-snap-type: x mandatory;      /* Activa el "snap" horizontal obligatorio */
+    -webkit-overflow-scrolling: touch;  /* Mejora el scroll en iOS */
+    }
+    .services .card {
+    flex: 0 0 80%;           /* Cada tarjeta ocupa el 80% del ancho del contenedor */
+    scroll-snap-align: start;/* Se alinea al inicio al hacer scroll */
+    }
+}
+/*
 @media screen and (max-width: 800px) {
     .service-cards .card {
-        flex: 1 1 calc(50% - 20px); /* Cada elemento ocupa la mitad del ancho disponible */
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media screen and (max-width: 500px) {
     .service-cards .card {
-        flex: 1 1 100%; /* Cada elemento ocupa el ancho completo */
+        flex: 1 1 100%;
     }
 }
 
@@ -415,8 +427,83 @@ body{
     transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+    .contact-us h4 {
+        font-size: 1.3rem;
+    }
+
+    .contact-us h6 {
+        font-size: 1rem;
+    }
+
+    .contact-us p {
+        font-size: 0.9rem;
+    }
+
+    .contact-us i {
+        font-size: 1rem;
+    }
+}
+
 /* - - - - - - - -  */
 
+/* LO QUE NOS MUEVE */
+
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(to bottom, #e53935, #ffffff);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content h2 {
+    font-weight: bold;
+}
+
+.hero-content p {
+    color: white;
+}
+
+.btn-servicios {
+    background-color: white;
+    color: #e53935;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.btn-servicios:hover {
+    background-color: #fce4ec;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+    padding: 20px 0;
+    text-align: center;
+    }
+
+    .hero-content h2 {
+    font-size: 1.4rem;
+    }
+
+    .hero-content p {
+    font-size: 0.60rem;
+    }
+
+    .btn-servicios {
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    }
+
+    .hero-img {
+    max-width: 70%;
+    margin-top: 20px;
+    }
+}
 /* Footer */
 
 footer {
