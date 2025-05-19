@@ -6,6 +6,7 @@ if (isset($_SESSION["usuario_sesion"])) {
 } else {
     
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -26,12 +27,16 @@ if (isset($_SESSION["usuario_sesion"])) {
             <label for="pass">Contraseña</label>
             <input type="password" id="pass" name="pass" placeholder="Escribe tu contraseña" required>
 
+            <div class="g-recaptcha" data-sitekey="6LfsRkArAAAAAIfTGdzy3-UAWNsKz_W2lXpiJmDW"></div>
+
             <input type="submit" value="Iniciar Sesión">
         </form>
         <div class="form-footer">
             © 2025 Botica Servi Salud
         </div>
     </div>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
 </html>
