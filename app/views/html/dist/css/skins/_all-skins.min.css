@@ -1,8 +1,43 @@
 .skin-blue .main-header .navbar {
-    background-color: hsl(0, 0%, 0%);
+    background-color: rgba(30, 40, 44);
 }
 .skin-blue .main-header .navbar .nav > li > a {
     color: #fff;
+}
+.main-sidebar {
+    background: linear-gradient(to left, #000000, #0e1014 50%, #1f2027 75%);
+}
+#user-footer-changes{
+    background-color: #0d1113;
+    
+}
+#user-footer-changes a{
+    background-color: #1e282c;
+    color: #cacaca;
+    font-weight: 400;
+    border-color: #1c2529;
+}
+#user-footer-changes a:hover{
+    background: #14191b;
+    font-weight: 400;
+    color: #a1a1a1;
+    border-color: #0d1113;
+
+}
+
+#user-header-color{
+  background:
+  linear-gradient(217deg, rgba(30, 40, 44, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(30, 40, 44, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(30, 40, 44, 0.8), rgb(0, 0, 0) 70.71%);
+    height: 200px;
+    /* HOLA DESDE EL CONTROLADOR DEL USUARIO */
+}
+
+.textitos{
+    color: #ffffff6c;
+    font-size: 16px !important;
+    font-weight: 300;
 }
 .skin-blue .main-header .navbar .nav > li > a:hover,
 .skin-blue .main-header .navbar .nav > li > a:active,
@@ -25,7 +60,7 @@
     color: #fff;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-    background-color: #a93636;
+    background: rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 767px) {
     .skin-blue .main-header .navbar .dropdown-menu li.divider {
@@ -39,15 +74,15 @@
     }
 }
 .skin-blue .main-header .logo {
-    background-color: #367fa9;
+    background-color: rgba(26, 33, 36,0.8);
     color: #fff;
     border-bottom: 0 solid transparent;
 }
 .skin-blue .main-header .logo:hover {
-    background-color: #357ca5;
+    background-color: rgba(26, 33, 36,0.8);
 }
 .skin-blue .main-header li.user-header {
-    background-color: #3c8dbc;
+    background-color: #2a3937;
 }
 .skin-blue .content-header {
     background: transparent;
@@ -55,15 +90,15 @@
 .skin-blue .wrapper,
 .skin-blue .main-sidebar,
 .skin-blue .left-side {
-    background-color: #222d32;
+background-color: #000000;
 }
 .skin-blue .user-panel > .info,
 .skin-blue .user-panel > .info > a {
     color: #fff;
 }
 .skin-blue .sidebar-menu > li.header {
-    color: #4b646f;
-    background: #1a2226;
+    color: #b0b0b1;
+    background: #101213;
 }
 .skin-blue .sidebar-menu > li > a {
     border-left: 3px solid transparent;
@@ -72,14 +107,14 @@
 .skin-blue .sidebar-menu > li.active > a,
 .skin-blue .sidebar-menu > li.menu-open > a {
     color: #fff;
-    background: #1e282c;
+    background-color: rgba(26, 33, 36,0.8);
 }
 .skin-blue .sidebar-menu > li.active > a {
     border-left-color: #3c8dbc;
 }
 .skin-blue .sidebar-menu > li > .treeview-menu {
     margin: 0 1px;
-    background: #2c3b41;
+    background: #08080b;
 }
 .skin-blue .sidebar a {
     color: #b8c7ce;

@@ -22,39 +22,12 @@
                   <span class="label label-warning">10</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li class="header">You have 10 notifications</li>
                   <li>
                     <!-- inner menu: contains the actual data -->
                     <ul class="menu">
                       <li>
                         <a href="#">
-                          <i class="fa fa-users text-aqua"></i> 5 new members
-                          joined today
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-warning text-yellow"></i> Very long
-                          description here that may not fit into the page and
-                          may cause design problems
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-users text-red"></i> 5 new members
-                          joined
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-shopping-cart text-green"></i> 25
-                          sales made
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-user text-red"></i> You changed your
-                          username
+                          <i class="fa fa-user text-red"></i> Se cambió la foto de perfil
                         </a>
                       </li>
                     </ul>
@@ -66,7 +39,7 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img
-                    src="html/dist/img/user2-160x160.jpg"
+                    src="html/dist/img/black bulls.jpg"
                     class="user-image"
                     alt="User Image"
                   />
@@ -78,21 +51,21 @@
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
-                  <li class="user-header">
+                  <li class="user-header" id="user-header-color">
                     <img
-                      src="html/dist/img/user2-160x160.jpg"
+                      src="html/dist/img/black bulls.jpg"
                       class="img-circle"
                       alt="User Image"
                     />
                     <p>
                       <?php //inicio
-                      echo $nombre_usuario." ".$apellido_usuario
-                     //cierre ?> - Web Developer
-                      <small>Member since Nov. 2012</small>
+                      echo "Bienvenido <br>".$nombre_usuario." ".$apellido_usuario
+                     //cierre ?>
+                      <small class="textitos">Cerrar sesión solo por aquí</small>
                     </p>
                   </li>
                   <!-- Menu Footer-->
-                  <li class="user-footer">
+                  <li class="user-footer" id="user-footer-changes">
                     <div class="pull-left">
                       <a href="#" class="btn btn-default btn-flat">Perfil</a>
                     </div>
@@ -218,4 +191,5 @@
           </ul>
         </section>
         <!-- /.sidebar -->
+         <!-- ola -->
       </aside>
