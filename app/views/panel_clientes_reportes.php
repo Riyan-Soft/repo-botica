@@ -125,7 +125,7 @@
         <?php require_once("default/footer.php");?>
     </div>  <!-- FINAL DEL DIV DEL CONTENEDOR -->
         <!-- Todos los scripts -->
-    <script src="assets/js/reportes_c.js"></script>
+    <script src="assets/js/reportes_clientes.js"></script>
         <?php require_once("default/links-script.php");?>
   </body>
 </html>
