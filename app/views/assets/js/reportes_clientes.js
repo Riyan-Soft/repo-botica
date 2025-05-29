@@ -1,8 +1,8 @@
 //Almacenar en una variable 
 // All = todo
 // querySelectorAll -> Significa selecionar todos los ID que tienen ese BOTON
-const btnEditar = document.querySelectorAll("#btnEditar");
-const btnEliminar = document.querySelectorAll("#btnEliminar");
+const btnEditar = document.querySelectorAll(".btnEditar");
+const btnEliminar = document.querySelectorAll(".btnEliminar");
 
 //Ahora consulto con un forEach, para saber cuantos botones hay con ese ID
 btnEditar.forEach(botonsito => {
