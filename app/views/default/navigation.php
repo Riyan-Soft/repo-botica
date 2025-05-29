@@ -15,26 +15,7 @@
           </a>
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-              <!-- Notifications: style can be found in dropdown.less -->
-              <li class="dropdown notifications-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-bell-o"></i>
-                  <span class="label label-warning">10</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <!-- inner menu: contains the actual data -->
-                    <ul class="menu">
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-user text-red"></i> Se cambió la foto de perfil
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="footer"><a href="#">View all</a></li>
-                </ul>
-              </li>
+
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -131,31 +112,16 @@
                   </a>
                   <ul class="treeview-menu">
                     <li>
-                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1 </a>
+                      <a href="#"><i class="fa fa-circle-o"></i> Reporte Medicamentos</a>
                     </li>
                     <li>
-                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2 </a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 3</a>
+                      <a href="#"><i class="fa fa-circle-o"></i> Reporte Servicios</a>
                     </li>
                   </ul>
                 </li>
-                <li class="treeview">
-                  <a href="#">
-                    <i class="fa fa-users"></i> <span>Usuarios</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li>
-                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 1</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-circle-o"></i> Sub Item 2</a>
-                    </li>
-                  </ul>
+                
+                 <li>
+                  <a href="#"><i class="fa fa-users"></i> <span>Usuarios</span> </a>
                 </li>
                  <li>
                   <a href="#"><i class="fa fa-shopping-cart"></i> <span>Ventas</span> </a>

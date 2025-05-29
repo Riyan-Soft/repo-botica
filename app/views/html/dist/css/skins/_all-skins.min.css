@@ -5,7 +5,7 @@
     color: #fff;
 }
 .main-sidebar {
-    background: linear-gradient(to left, #000000, #0e1014 50%, #1f2027 75%);
+    background: linear-gradient(to left, #000000, #0e1014 50%, #1f2027 75%)  !important;
 }
 #user-footer-changes{
     background-color: #0d1113;
@@ -25,13 +25,18 @@
 
 }
 
+.bg-special-color{
+    background-color: #36525e;
+    color: #ffffff;
+    padding: 10px;
+}
+
 #user-header-color{
   background:
   linear-gradient(217deg, rgba(30, 40, 44, 0.8), rgba(255, 0, 0, 0) 70.71%),
   linear-gradient(127deg, rgba(30, 40, 44, 0.8), rgba(0, 255, 0, 0) 70.71%),
   linear-gradient(336deg, rgba(30, 40, 44, 0.8), rgb(0, 0, 0) 70.71%);
     height: 200px;
-    /* HOLA DESDE EL CONTROLADOR DEL USUARIO */
 }
 
 .textitos{
