@@ -62,16 +62,23 @@
                             echo "<td>".$fila['correo']."</td>";
                             echo "<td>".$fila['estado']."</td>";
                             echo "<td>
-                                    <!-- btn editar -->
-                                    <button id='btnEdit' class='btn bg-light-blue-active color-palette'>
-                                    <i class='fa fa-fw fa-edit'></i>Edit
-                                    </button>
-                                    <!-- btn eliminar -->
-                                  <button id='btnDelete' data-dni='$fila[dni]' class='btn bg-red-active color-palette'>
-                                  <i class='fa fa-fw fa-trash'></i>
-                                  </button>
-
-                                  <td>";
+    <!-- btn editar -->
+    <button class='btnEditar btn bg-light-blue-active color-palette'
+        data-dni='".$fila['dni']."'
+        data-name='".$fila['nombre']."'
+        data-lastname='".$fila['apellido']."'
+        data-correo='".$fila['correo']."'>
+        <i class='fa fa-fw fa-edit'></i>Edit
+    </button>
+    <!-- btn eliminar -->
+    <button class='btnEliminar btn bg-red-active color-palette'
+        data-dni='".$fila['dni']."'
+        data-name='".$fila['nombre']."'
+        data-lastname='".$fila['apellido']."'
+        data-correo='".$fila['correo']."'>
+        <i class='fa fa-fw fa-trash'></i>
+    </button>
+</td>";
                             echo "</tr>";
                           };
                         ?>
@@ -84,7 +91,7 @@
 
         <!-- modals -->
 <!-- Modal -->
-<div class="modal fade" id="ModEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -108,7 +115,7 @@
             <br>
             <b>Apellido:</b> <input type="text" value="Campos Hernandez" id="apellido_cliente" style="border-color: transparent;" disabled>
             <br>
-            <b>    DNI :</b> <input type="text" value="0" id="dni_cliente" style="border-color: transparent;" disabled>
+            <b>    DNI :</b> <input type="text" value="0" id="id_cliente" style="border-color: transparent;" disabled>
         </div>
         <hr>
         <h4>Esta acción <b>no </b>es <b>reversible.</b></h4>
@@ -121,6 +128,46 @@
     </div>
   </div>
 </div>
+
+      <!-- Modal Editar cliente -->
+      <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Modal Editar Cliente</h4>
+            </div>
+            <div class="modal-body text-left">
+            <!--  INICIO DE FORMULARIO -->
+                <form action="#" method="post"> 
+                  <div class="mb-3">
+                      <label for="dni" class="form-label">DNI</label>
+                      <input type="text" disabled="true" readOnly 
+                      class="form-control" id="dni" name="dni_c">
+                  </div>
+                  <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre_c">
+                  </div>
+                  <div class="mb-3">
+                      <label for="apellido" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" id="apellido" name="apellido_c">
+                  </div>
+                  <div class="mb-4 mt-3">
+                      <label for="nombre" class="form-label">Correo electronico</label>
+                      <input type="email" class="form-control" id="email" name="correo_c">
+                  </div>
+                </form>
+            <!--  FIN DE FORMULARIO-->          
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-success" id="btnEditarCliente">Confirmar</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->    
+
       <!-- Footer -->
         <?php require_once("default/footer.php");?>
     </div>  <!-- FINAL DEL DIV DEL CONTENEDOR -->
