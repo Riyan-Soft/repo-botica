@@ -9,7 +9,19 @@
     // echo "No existe la sessión";
     // exit();
   }
+
+  // Conexión a la base de datos
+  require_once("../models/conexion.php");
+  $db = new Conexion();
+  $db->conectar();
+
+  // Consulta para contar clientes
+  $sql = "SELECT COUNT(*) AS total_clientes FROM tb_cliente";
+  $result = $db->getEjecutionQuery($sql);
+  $row = $result->fetch_assoc();
+  $total_clientes = $row['total_clientes'];
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -43,14 +55,17 @@
               <!-- small box -->
               <div class="small-box bg-special-color">
                 <div class="small-box-footer">
-                  <h4>Clientes Totales</h4>
-                  
+                  <h4>Clientes Totales &nbsp;&nbsp; 
+                    <i class="fa fa-arrow-circle-down"></i>
+                  </h4>
                 </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
-                </div>
-                <h5><!--ESCRIBIR AQUI -->
-                  <i class="fa fa-arrow-circle-right"></i>
+                <h5>
+                  <div style="text-align: center;">
+                  <p>Total de clientes en la base de datos: 
+                  </p>
+                  <?php echo "<h1>".$total_clientes."</h1>"?>
+                  <p>(personas)</p>
+                  </div>
                 </h5>
               </div>
             </div>
@@ -63,7 +78,8 @@
                 <div class="icon">
                   <i class="ion ion-bag"></i>
                 </div>
-                <h5><!--ESCRIBIR AQUI -->
+                <h5>
+                  <?php echo $total_clientes; ?>
                   <i class="fa fa-arrow-circle-right"></i>
                 </h5>
               </div>
@@ -73,12 +89,12 @@
               <div class="small-box bg-special-color">
                 <div class="small-box-footer">
                   <h4>Promedio de venta diaria</h4>
-
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
+                  <div class="icon">
+                    <i class="ion ion-bag"></i>
+                  </div>
                 </div>
-                </div>
-                <h5><!--ESCRIBIR AQUI -->
+                <h5>
+                  <?php echo $total_clientes; ?>
                   <i class="fa fa-arrow-circle-right"></i>
                 </h5>
               </div>
@@ -92,7 +108,8 @@
                 <div class="icon">
                   <i class="ion ion-bag"></i>
                 </div>
-                <h5><!--ESCRIBIR AQUI -->
+                <h5>
+                  <?php echo $total_clientes; ?>
                   <i class="fa fa-arrow-circle-right"></i>
                 </h5>
               </div>
