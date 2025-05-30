@@ -89,47 +89,46 @@
         </section>
       </div>
 
-        <!-- modals -->
-<!-- Modal -->
-<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel">Accion Eliminar
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        
-            <span aria-hidden="true">&times; Cerrar</span>
-            </button>
-        </h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        </button>
-      </div>
-      <div class="modal-body">
-        
-        <h4>Estás seguro que deseas <b>eliminar</b> este cliente?</h4>
-        <!-- Datos -->
-        <div class="text-center">
-            <hr>
-            <h3>Cliente:</h3>
-            <b>Nombre:</b> <input type="text" value="Sergio Alexandro Augusto" id="nombre_cliente" style="border-color: transparent;" disabled> 
-            <br>
-            <b>Apellido:</b> <input type="text" value="Campos Hernandez" id="apellido_cliente" style="border-color: transparent;" disabled>
-            <br>
-            <b>    DNI :</b> <input type="text" value="0" id="id_cliente" style="border-color: transparent;" disabled>
+  <!--------- modals ------------>
+      <!-- Modal -->
+      <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel">Accion Eliminar
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              
+                  <span aria-hidden="true">&times; Cerrar</span>
+                  </button>
+              </h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+              
+              <h4>Estás seguro que deseas <b>eliminar</b> este cliente?</h4>
+              <!-- Datos -->
+              <div class="text-center">
+                  <hr>
+                  <h3>Cliente:</h3>
+                  <b>Nombre:</b> <input type="text" value="Sergio Alexandro Augusto" id="nombre_cliente" style="border-color: transparent;" disabled> 
+                  <br>
+                  <b>Apellido:</b> <input type="text" value="Campos Hernandez" id="apellido_cliente" style="border-color: transparent;" disabled>
+                  <br>
+                  <b>    DNI :</b> <input type="text" value="0" id="id_cliente" style="border-color: transparent;" disabled>
+              </div>
+              <hr>
+              <h4>Esta acción <b>no </b>es <b>reversible.</b></h4>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-danger" id="btnDeleteConfirm">Eliminar</button>
+            </div>
+          </div>
         </div>
-        <hr>
-        <h4>Esta acción <b>no </b>es <b>reversible.</b></h4>
-        
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-danger" id="btnDeleteConfirm">Eliminar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-      <!-- Modal Editar cliente -->
       <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -166,7 +165,7 @@
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->    
+      </div> 
 
       <!-- Footer -->
         <?php require_once("default/footer.php");?>

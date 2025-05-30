@@ -16,6 +16,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>AdminLTE 2 | Dashboard</title>
+    <link rel="icon" type="image/png" href="../../web/resources/favicon.png">
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
     <!-- Incluir una vez todos los links -->
@@ -42,12 +43,13 @@
               <!-- small box -->
               <div class="small-box bg-special-color">
                 <div class="small-box-footer">
-                  <h4>Usuarios en la base de datos:</h4>
+                  <h4>Clientes Totales</h4>
+                  
                 </div>
                 <div class="icon">
                   <i class="ion ion-bag"></i>
                 </div>
-                <h5 class="h5-edit">Usuarios registrados
+                <h5><!--ESCRIBIR AQUI -->
                   <i class="fa fa-arrow-circle-right"></i>
                 </h5>
               </div>
@@ -56,12 +58,12 @@
               <!-- small box -->
               <div class="small-box bg-special-color">
                 <div class="small-box-footer">
-                  <h4>Usuarios en la base de datos:</h4>
+                  <h4>Ventas del Día</h4>
                 </div>
                 <div class="icon">
                   <i class="ion ion-bag"></i>
                 </div>
-                <h5 class="h5-edit">Usuarios registrados
+                <h5><!--ESCRIBIR AQUI -->
                   <i class="fa fa-arrow-circle-right"></i>
                 </h5>
               </div>
@@ -70,15 +72,13 @@
               <!-- small box -->
               <div class="small-box bg-special-color">
                 <div class="small-box-footer">
-                  <h4>Usuarios en la base de datos:</h4>
-                <h4>HOLA ESTE ES UN MENSAJE DE PRUEBA</h4>
+                  <h4>Promedio de venta diaria</h4>
 
-
                 <div class="icon">
                   <i class="ion ion-bag"></i>
                 </div>
                 </div>
-                <h5 class="h5-edit">Usuarios registrados
+                <h5><!--ESCRIBIR AQUI -->
                   <i class="fa fa-arrow-circle-right"></i>
                 </h5>
               </div>
@@ -87,12 +87,12 @@
               <!-- small box -->
               <div class="small-box bg-special-color">
                 <div class="small-box-footer">
-                  <h4>Usuarios en la base de datos:</h4>
+                  <h4>Productos más vendidos</h4>
                 </div>
                 <div class="icon">
                   <i class="ion ion-bag"></i>
                 </div>
-                <h5 class="h5-edit">Usuarios registrados
+                <h5><!--ESCRIBIR AQUI -->
                   <i class="fa fa-arrow-circle-right"></i>
                 </h5>
               </div>
