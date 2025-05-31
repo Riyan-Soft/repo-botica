@@ -2,84 +2,60 @@
 const btnEditar = document.querySelectorAll(".btnEditar");
 const btnEliminar = document.querySelectorAll(".btnEliminar");
 
-//Ahora consulto con un forEach, para saber cuantos botones hay con ese ID
-btnEditar.forEach(botonsito => {
-    //Luego a todos los botones le hago una accion de escucha
-    botonsito.addEventListener('click', function(){
-        //  alert("Este boton es de editar")
-         $('#modalEditar').modal('show') //Jquery codigo Modal
-         const inputDNI = document.getElementById("dni");
-         const inputNombre = document.getElementById("nombre");
-         const inputApellido= document.getElementById("apellido");
-         const inputCorreo = document.getElementById("email");
-         inputDNI.value = botonsito.dataset.dni;
-         inputNombre.value = botonsito.dataset.name;
-         inputApellido.value = botonsito.dataset.lastname;
-         inputCorreo.value = botonsito.dataset.correo;
+// Editar producto
+btnEditar.forEach(boton => {
+    boton.addEventListener('click', function(){
+        $('#modalEditar').modal('show');
+        document.getElementById("edit_id_producto").value = boton.dataset.id;
+        document.getElementById("edit_codigo").value = boton.dataset.codigo;
+        document.getElementById("edit_nombre").value = boton.dataset.nombre;
+        document.getElementById("edit_cantidad").value = boton.dataset.cantidad;
+        document.getElementById("edit_precio").value = boton.dataset.precio;
+        document.getElementById("edit_descripcion").value = boton.dataset.descripcion;
     });
 });
 
-//Ahora consulto con un forEach, para saber cuantos botones hay con ese ID
-btnEliminar.forEach(botonsito => {
-    //Luego a todos los botones le hago una accion de escucha
-    botonsito.addEventListener('click', function(){
-         $('#modalEliminar').modal('show') //Jquery codigo
-         //Almacenamos en una variable llamada INPUTDNI
-         const inputDNI = document.getElementById("id_cliente");
-         const dni_de_persona = botonsito.dataset.dni;
-         //Guardo el dni de la persona en elemento del html de INPUT DNI
-         inputDNI.value = dni_de_persona;
-        //  alert(dni_de_persona + " ___ " + inputDNI)
+// Eliminar producto
+btnEliminar.forEach(boton => {
+    boton.addEventListener('click', function(){
+        $('#modalEliminar').modal('show');
+        document.getElementById("delete_id_producto").value = boton.dataset.id;
     });
 });
 
-/// boton de confirmar eliminacion del modal
-const btnEliminarConfirmar = document.querySelector("#btnEliminarCliente");
-btnEliminarConfirmar.addEventListener('click', function(){
-      const inputDNI = document.getElementById("id_cliente").value;
-   // ============== INICIO DE AJAX CON JQUERY ======================== //
-            $.ajax({
-                url: '../controllers/ClienteEliminarController.php',
-                type: 'POST',
-                data: {dni_c : inputDNI},
-                success: function(respuesta){
-                    if(respuesta === "yes"){
-                        alert("ELIMINACION CORRECTA");
-                    }else{
-                        alert("ELIMINACION INCORRECTA");
-                    }
-                }
-            })
-            window.location.reload(); // CON ESTO SE ACTUALIZA LA PAGINA COMPLETA
-        // ============== FINAL DE AJAX CON JQUERY ======================== //
-})
+// Confirmar edición
+document.getElementById("formEditarProducto").addEventListener('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+        url: '../controllers/ProductoEditarController.php',
+        type: 'POST',
+        data: $(this).serialize(),
+        success: function(respuesta){
+            if(respuesta === "yes"){
+                alert("ACTUALIZACIÓN CORRECTA");
+                window.location.reload();
+            }else{
+                alert("ACTUALIZACIÓN INCORRECTA");
+            }
+        }
+    });
+});
 
-//boton de confirmar actualizacion del modal
-const btnActualizarConfirmar = document.querySelector("#btnEditarCliente");
-btnActualizarConfirmar.addEventListener('click', function(){
-         const inputDNI = document.getElementById("dni");
-         const inputNombre = document.getElementById("nombre");
-         const inputApellido= document.getElementById("apellido");
-         const inputCorreo = document.getElementById("email");
-       // ============== INICIO DE AJAX CON JQUERY ======================== //
-            $.ajax({
-                url: '../controllers/ClienteEditarController.php',
-                type: 'POST',
-                data: {
-                        dni_c : inputDNI.value,
-                        name_c : inputNombre.value,
-                        apellido_c : inputApellido.value,
-                        correo_c : inputCorreo.value,
-                      },
-                success: function(respuesta){
-                    if(respuesta === "yes"){
-                        alert("ACTUALIZACIÓN CORRECTA");
-                    }else{
-                        alert("ACTUALIZACIÓN INCORRECTA");
-                    }
-                }
-            })
-           // window.location.reload(); // CON ESTO SE ACTUALIZA LA PAGINA COMPLETA
-        // ============== FINAL DE AJAX CON JQUERY ======================== //
-})
+// Confirmar eliminación
+document.getElementById("formEliminarProducto").addEventListener('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+        url: '../controllers/ProductoEliminarController.php',
+        type: 'POST',
+        data: $(this).serialize(),
+        success: function(respuesta){
+            if(respuesta === "yes"){
+                alert("ELIMINACIÓN CORRECTA");
+                window.location.reload();
+            }else{
+                alert("ELIMINACIÓN INCORRECTA");
+            }
+        }
+    });
+});
 

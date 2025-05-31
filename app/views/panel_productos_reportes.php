@@ -55,8 +55,15 @@
                     echo "<td>".$fila['precio']."</td>";
                     echo "<td>".$fila['descripcion']."</td>";
                     echo "<td>
-                      <button class='btn btn-primary'>Editar</button>
-                      <button class='btn btn-danger'>Eliminar</button>
+                      <button class='btn btn-primary btnEditar'
+                        data-id='".$fila['id_producto']."'
+                        data-codigo='".$fila['codigo_producto']."'
+                        data-nombre='".$fila['nombre']."'
+                        data-cantidad='".$fila['cantidad']."'
+                        data-precio='".$fila['precio']."'
+                        data-descripcion='".$fila['descripcion']."'>Editar</button>
+                      <button class='btn btn-danger btnEliminar'
+                        data-id='".$fila['id_producto']."'>Eliminar</button>
                     </td>";
                     echo "</tr>";
                   }
@@ -66,6 +73,76 @@
           </div>
         </section>
       </div>
+
+        <!--------- modals ------------>
+        <!-- Modal Eliminar Producto -->
+<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <form id="formEliminarProducto">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Eliminar Producto</h4>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="delete_id_producto" name="id_producto">
+          <h4>¿Estás seguro que deseas <b>eliminar</b> este producto?</h4>
+          <hr>
+          <h4>Esta acción <b>no</b> es <b>reversible.</b></h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-danger" id="btnDeleteConfirm">Eliminar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Editar Producto -->
+<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <form id="formEditarProducto">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Editar Producto</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-left">
+          <input type="hidden" id="edit_id_producto" name="id_producto">
+          <div class="mb-3">
+            <label for="edit_codigo" class="form-label">Código</label>
+            <input type="text" class="form-control" id="edit_codigo" name="codigo_producto" required>
+          </div>
+          <div class="mb-3">
+            <label for="edit_nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="edit_nombre" name="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="edit_cantidad" class="form-label">Cantidad</label>
+            <input type="number" class="form-control" id="edit_cantidad" name="cantidad" required>
+          </div>
+          <div class="mb-3">
+            <label for="edit_precio" class="form-label">Precio</label>
+            <input type="number" class="form-control" id="edit_precio" name="precio" step="0.01" required>
+          </div>
+          <div class="mb-3">
+            <label for="edit_descripcion" class="form-label">Descripción</label>
+            <input type="text" class="form-control" id="edit_descripcion" name="descripcion" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success" id="btnEditarProducto">Confirmar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<script src="assets/js/reportes_productos.js"></script>
       <?php require_once("default/footer.php");?>
     </div>
     <?php require_once("default/links-script.php");?>
