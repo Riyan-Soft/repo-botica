@@ -42,8 +42,34 @@ if (isset($_SESSION["usuario_sesion"])) {
         <div class="row">
           <div class="col-lg-12 table-responsive">
             <!--  INICIO -->
-
-            <!--  FIN -->
+<form action="../controllers/UsuarioRegistrarController.php" method="post" class="mb-4">
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" required>
+  </div>
+  <div class="form-group">
+    <label for="apellido">Apellido</label>
+    <input type="text" class="form-control" id="apellido" name="apellido" required>
+  </div>
+  <div class="form-group">
+    <label for="usuario">Usuario</label>
+    <input type="text" class="form-control" id="usuario" name="usuario" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Contraseña</label>
+    <input type="password" class="form-control" id="password" name="password" required>
+  </div>
+  <div class="form-group">
+    <label for="rol">Rol</label>
+    <select class="form-control" id="rol" name="rol" required>
+      <option value="">Seleccione un rol</option>
+      <option value="1">Administrador</option>
+      <option value="2">Cajero</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Registrar Usuario</button>
+</form>
+<!-- FIN -->
           </div>
         </div>
       </section>
