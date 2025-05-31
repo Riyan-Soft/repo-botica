@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2025 a las 18:15:50
+-- Tiempo de generación: 31-05-2025 a las 17:55:06
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -55,7 +55,11 @@ CREATE TABLE `tb_cliente` (
 INSERT INTO `tb_cliente` (`id`, `dni`, `nombre`, `apellido`, `correo`, `estado`) VALUES
 (1, '001613327', 'Rider Andre', 'Cuba', 'riderandrepc@gmail.com', '1'),
 (2, '2352163', 'sdvsd', 'sdvsdvsvs', 'xsd@gmail.com', '1'),
-(3, '23521631241', 'Rider Andre', 'Cuba', 'riderandrepctest@gmail.com', '1');
+(3, '23521631241', 'Rider Andre', 'Cuba', 'riderandrepctest@gmail.com', '1'),
+(4, '2372352153', 'Prueba', 'kjhgfd', 'riderandresdapc@gmail.com', '1'),
+(5, '234567890', 'holas esto es un test', 'test numero10', 'testnumero10@gmail.com', '1'),
+(6, '92835232', 'Registro de persona', 'apellido de persoa xd', '23456789765@test.com', '1'),
+(7, '8765432', 'ds', 'fgddfg', 'sderfe@test.com', '1');
 
 -- --------------------------------------------------------
 
@@ -65,6 +69,7 @@ INSERT INTO `tb_cliente` (`id`, `dni`, `nombre`, `apellido`, `correo`, `estado`)
 
 CREATE TABLE `tb_producto` (
   `id_producto` int(11) NOT NULL,
+  `codigo_producto` varchar(45) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `precio` double(10,2) NOT NULL,
@@ -74,6 +79,15 @@ CREATE TABLE `tb_producto` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tb_producto`
+--
+
+INSERT INTO `tb_producto` (`id_producto`, `codigo_producto`, `nombre`, `cantidad`, `precio`, `descripcion`, `id_categoria`, `estado`, `created_at`, `updated_at`) VALUES
+(1, '34s232df', 'prueba 1', 32, 23.99, 'Es una medicina', 0, 1, '2025-05-31 04:33:13', '2025-05-31 14:28:35'),
+(4, 'Qudn14asds2', 'nibuprofeno', 200, 4.00, '200 mg', 0, 1, '2025-05-31 13:40:50', '2025-05-31 13:40:50'),
+(5, 'sdseadar213', 'Jsssssssss', 234, 32.00, 'otra medicina 200mg', 0, 1, '2025-05-31 14:23:49', '2025-05-31 14:23:49');
 
 -- --------------------------------------------------------
 
@@ -120,7 +134,8 @@ CREATE TABLE `tb_usuario` (
 INSERT INTO `tb_usuario` (`id_usuario`, `nombre`, `apellido`, `usuario`, `password`, `telefono`, `id_rol`, `estado`, `created_at`, `updated_at`) VALUES
 (1, 'Juan', 'Pérez', 'superadmin', 'superpassword', '987654321', 1, 1, '2025-03-15 14:27:55', '2025-03-15 14:27:55'),
 (2, 'María', 'Gómez', 'admin', 'adminpassword', '912345678', 2, 1, '2025-03-15 14:27:55', '2025-03-15 14:27:55'),
-(3, 'Rider', 'PC', 'RiyanPC', '123', '935 636 843', 1, 1, '2025-05-10 15:55:00', '2025-05-10 15:55:00');
+(3, 'Rider', 'PC', 'RiyanPC', '123', '935 636 843', 1, 1, '2025-05-10 15:55:00', '2025-05-10 15:55:00'),
+(4, 'jackson', 'test', 'hola', '$2y$10$uYISojOH8vnlHGNligqh8OUzUKN1U2NRd/I2wASEzbyCuvZ2qqLsO', '', 2, 1, '2025-05-31 15:29:26', '2025-05-31 15:29:26');
 
 --
 -- Índices para tablas volcadas
@@ -174,13 +189,13 @@ ALTER TABLE `tb_categoria`
 -- AUTO_INCREMENT de la tabla `tb_cliente`
 --
 ALTER TABLE `tb_cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_producto`
 --
 ALTER TABLE `tb_producto`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_rol`
@@ -192,7 +207,7 @@ ALTER TABLE `tb_rol`
 -- AUTO_INCREMENT de la tabla `tb_usuario`
 --
 ALTER TABLE `tb_usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
