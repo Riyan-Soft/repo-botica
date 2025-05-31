@@ -15,7 +15,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Reporte de Clientes</title>
+    <title>Registrar Productos</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
     <!-- Incluir una vez todos los links -->
@@ -36,21 +36,40 @@
           </ol>
         </section>
         <!-- Main content -->
-        <section class="content ">
+        <section class="content">
           <div class="row">
-            <div class="col-lg-12 table-responsive">
-                <!--  INICIO -->
-                      
-                <!--  FIN -->
+            <div class="col-lg-3">
+              <!--  INICIO DE FORMULARIO -->
+              <form action="../controllers/ProductoRegistrarController.php" method="post"> 
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="producto_nombre" required>
+                </div>
+                <div class="mb-3">
+                  <label for="cantidad" class="form-label">Cantidad</label>
+                  <input type="number" class="form-control" id="cantidad" name="producto_cantidad" min="1" required>
+                </div>
+                <div class="mb-3">
+                  <label for="precio" class="form-label">Precio</label>
+                  <input type="number" class="form-control" id="precio" name="producto_precio" step="0.01" min="0" required>
+                </div>
+                <div class="mb-4 mt-3">
+                  <label for="descripcion" class="form-label">Descripción</label>
+                  <input type="text" class="form-control" id="descripcion" name="producto_descripcion" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+              </form>
+              <!--  FIN DE FORMULARIO-->
             </div>
           </div>
-        </section>
+        </section> 
+        <!--  FIN -->
       </div>
       <!-- Footer -->
       <?php require_once("default/footer.php");?>
     </div>  <!-- FINAL DEL DIV DEL CONTENEDOR -->
 
-       <!-- Todos los scripts -->
-      <?php require_once("default/links-script.php");?>
+    <!-- Todos los scripts -->
+    <?php require_once("default/links-script.php");?>
   </body>
 </html>

@@ -6,8 +6,6 @@
     $privilegios_usuario = $_SESSION["usuario_sesion"]["id_rol"];
   }else{
     header("location: ../index.php");
-    // echo "No existe la sessión";
-    // exit();
   }
 ?>
 <!DOCTYPE html>
@@ -15,7 +13,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Registro de clientes</title>
+    <title>Registro de productos</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
     <!-- Incluir una vez todos los links -->
@@ -23,7 +21,6 @@
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper"> <!-- INICIO DEL DIV DEL CONTENEDOR -->
-      <!-- Cabezera y Nav del lado izquierdo -->
       <?php require_once("default/navigation.php") ?>
       <!-- Content Wrapper - Contenido Principal-->
       <div class="content-wrapper">
