@@ -4,10 +4,10 @@ require_once("conexion.php");
 //Creamos una clase llamada Productos
 class Productos{
     // Método para registrar un producto
-    public function registrar_producto($nombre, $cantidad, $precio, $descripcion){
+    public function registrar_producto($codigo_producto, $nombre, $cantidad, $precio, $descripcion){
         $cn = new Conexion();
         $cn->conectar();
-        $sql = "INSERT INTO tb_producto(nombre, cantidad, precio, descripcion) VALUES ('$nombre', '$cantidad', '$precio', '$descripcion')";
+        $sql = "INSERT INTO tb_producto(codigo_producto, nombre, cantidad, precio, descripcion) VALUES ('$codigo_producto','$nombre', '$cantidad', '$precio', '$descripcion')";
         return $cn->getEjecutionQuery($sql);
     }
 

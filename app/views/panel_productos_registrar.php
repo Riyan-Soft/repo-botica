@@ -53,6 +53,10 @@
                   <label for="precio" class="form-label">Precio</label>
                   <input type="number" class="form-control" id="precio" name="producto_precio" step="0.01" min="0" required>
                 </div>
+                <div class="mb-3">
+                  <label for="codigo" class="form-label">Codigo producto</label>
+                  <input type="text" class="form-control" id="codigo" name="producto_codigo" required>
+                </div>
                 <div class="mb-4 mt-3">
                   <label for="descripcion" class="form-label">Descripción</label>
                   <input type="text" class="form-control" id="descripcion" name="producto_descripcion" required>
