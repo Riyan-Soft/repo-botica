@@ -18,5 +18,29 @@ class Productos{
         $sql = "SELECT * FROM tb_producto";
         return $cn->getEjecutionQuery($sql);
     }
+
+    // Método para editar producto
+    public function editar_producto($id, $codigo, $nombre, $cantidad, $precio, $descripcion){
+        $cn = new Conexion();
+        $cn->conectar();
+        $sql = "UPDATE tb_producto SET codigo_producto='$codigo', nombre='$nombre', cantidad='$cantidad', precio='$precio', descripcion='$descripcion' WHERE id_producto='$id'";
+        return $cn->getEjecutionQuery($sql);
+    }
+
+    // Método para eliminar producto
+    public function eliminar_producto($id){
+        $cn = new Conexion();
+        $cn->conectar();
+        $sql = "DELETE FROM tb_producto WHERE id_producto='$id'";
+        return $cn->getEjecutionQuery($sql);
+    }
+
+    // Método para consultar producto por código
+    public function consultar_codigo_producto($codigo){
+        $cn = new Conexion();
+        $cn->conectar();
+        $sql = "SELECT * FROM tb_producto WHERE codigo_producto = '$codigo'";
+        return $cn->getEjecutionQuery($sql);
+    }
 }
 ?>

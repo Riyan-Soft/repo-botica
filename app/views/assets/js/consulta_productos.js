@@ -33,3 +33,38 @@ variable_dni.addEventListener("keyup", function (){
 
     
 });
+
+const inputCodigo = document.getElementById("codigo_producto");
+inputCodigo.addEventListener("keyup", function (){
+    // Puedes validar el input si lo deseas
+    const codigo = this.value.trim();
+    if(codigo.length > 0){
+        // AJAX para buscar producto por código
+        $.ajax({
+            url: "../controllers/ProductoConsultaController.php",
+            type: "GET",
+            data: {
+                codigo: codigo
+            },
+            success:function(respuesta){
+                const variable_tabla = document.getElementById("contenedor_datos");
+                if(respuesta.length > 0){
+                    variable_tabla.innerHTML = `
+                        <tr>
+                            <td>${respuesta[0].id_producto}</td>
+                            <td>${respuesta[0].codigo_producto}</td>
+                            <td>${respuesta[0].nombre}</td>
+                            <td>${respuesta[0].cantidad}</td>
+                            <td>${respuesta[0].precio}</td>
+                            <td>${respuesta[0].descripcion}</td>
+                        </tr>
+                    `;
+                }else{
+                    variable_tabla.innerHTML = `<tr><td colspan="6">No se encontró el producto</td></tr>`;
+                }
+            }
+        });
+    }else{
+        document.getElementById("contenedor_datos").innerHTML = "";
+    }
+});
