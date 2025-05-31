@@ -555,3 +555,8 @@ a:hover {
     margin-top: 20px;
 }
 /*  */
+
+.card a{
+    text-decoration: none;
+    color: inherit;
+}
