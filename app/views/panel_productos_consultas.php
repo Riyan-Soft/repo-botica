@@ -31,10 +31,10 @@ if (isset($_SESSION["usuario_sesion"])) {
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
-        <h1> Consultas clientes <small>Control panel</small> </h1>
+        <h1> Consultas producto <small>Control panel</small> </h1>
         <ol class="breadcrumb">
           <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Consultas Clientes</li>
+          <li class="active">Consultas Producto</li>
         </ol>
       </section>
       <!-- Main content -->
@@ -43,8 +43,8 @@ if (isset($_SESSION["usuario_sesion"])) {
           <div class="col-lg-12">
             <!--  INICIO CONSULTA DE CLIENTE -->
             <div class="form-group">
-              <label for="dni">DNI</label><br>
-              <input type="text" id="dni_cliente" maxlength="8">
+              <label for="codigo_producto">Código de producto</label><br>
+              <input type="text" id="codigo_producto" maxlength="20">
             </div>
             <!--  FIN DE CONSULTA DE CLIENTE-->
           </div>
@@ -52,15 +52,14 @@ if (isset($_SESSION["usuario_sesion"])) {
             <table class="table table-hover table-responsive" style="background:#ffff">
               <tr>
                 <th>#</th>
-                <th>DNI</th>
+                <th>Código</th>
                 <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Correo</th>
-                <th>Activo</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Descripción</th>
               </tr>
               <tbody id="contenedor_datos">
-                <!-- aqui mostraremos los datos del cliente -->
-                 <!-- mediante el archivo de javascript -->
+                <!-- aquí mostraremos los datos del producto -->
               </tbody>
             </table>
           </div>

@@ -34,5 +34,13 @@ class Productos{
         $sql = "DELETE FROM tb_producto WHERE id_producto='$id'";
         return $cn->getEjecutionQuery($sql);
     }
+
+    // Método para consultar producto por código
+    public function consultar_codigo_producto($codigo){
+        $cn = new Conexion();
+        $cn->conectar();
+        $sql = "SELECT * FROM tb_producto WHERE codigo_producto = '$codigo'";
+        return $cn->getEjecutionQuery($sql);
+    }
 }
 ?>
