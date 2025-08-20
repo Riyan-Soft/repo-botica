@@ -14,7 +14,7 @@ if (isset($_SESSION["usuario_sesion"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="views/assets/css/login-intranet.css">
+    <link rel="stylesheet" href="../views/assets/css/login-intranet.css">
 </head>
 <body>
     <div class="login-container">
